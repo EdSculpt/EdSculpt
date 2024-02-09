@@ -1,11 +1,11 @@
 ﻿---
-layout: post
+layout: article
 title: Typography Examples
 desc: Example file in md extention with shortcuts
 date: 2023-11-13
 url: typography-features
 cover: "horizontal-mgmt-OG.png"
-permalink: "/posts/{{ url | slug }}/"
+permalink: "/journal/{{ url | slug }}/"
 tags:
 - Features
 - Typography

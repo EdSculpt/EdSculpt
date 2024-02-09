@@ -1,8 +1,9 @@
 {
     "url": "https://example.com",
-    "title": "My Blog",
+    "title": "Educational Sculpt",
+    "site-name": "Educational Sculpt",
     "description": "Welcome to my blog",
-    "lang": "en",
+    "lang": "ru",
     "author": {
         "name": "Rong Ying",
         "surname": "feed.xml"

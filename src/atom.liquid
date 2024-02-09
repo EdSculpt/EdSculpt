@@ -25,7 +25,7 @@ version="2.0">
   </author>
 
   <link rel="self" href="{{ site.url }}/feed/atom.xml"/>
-  <link rel="alternate" type="text/html" href="{{ site.url }}/posts/"/>
+  <link rel="alternate" type="text/html" href="{{ site.url }}/journal/"/>
 
   <subtitle>Подзаголовок ленты</subtitle>
   <category term="Категория" scheme="URI схемы категорий"/>
@@ -35,10 +35,10 @@ version="2.0">
   <rights>© {{ site.author }} × 2017 — {% year %}</rights>
 
   <!-- Элементы записей (entries) -->
-  {%- for post in collections.posts | reverse %}
+  {%- for article in collections.articles | reverse %}
   <entry turbo="true">
-    <title>{{ post.data.title }}</title>
-    <id>{{ post.url }}</id>
+    <title>{{ article.data.title }}</title>
+    <id>{{ article.url }}</id>
     <updated>{{ date | dateIso }}</updated>
     <published>{{ date | dateIso }}</published>
     <author>
@@ -50,11 +50,11 @@ version="2.0">
     <content type="html">
         <turbo:content>
             <![CDATA[
-            {{ post.templateContent }}
+            {{ article.templateContent }}
             ]]>
          </turbo:content>
 </content>
-    <summary>{{ post.data.desc }}</summary>
+    <summary>{{ article.data.desc }}</summary>
     <category term="Категория записи" scheme="URI схемы категорий"/>
     {%- endfor -%}
     <!-- Другие опциональные элементы записи -->

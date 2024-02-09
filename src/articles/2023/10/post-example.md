@@ -1,11 +1,11 @@
 ﻿---
-layout: post
+layout: article
 title: Example post as md file
 desc: Example file in md extention with shortcuts
 date: 2023-10-26
 url: example-post
 cover: "horizontal-mgmt-OG.png"
-permalink: "/posts/{{ url | slug }}/"
+permalink: "/journal/{{ url | slug }}/"
 tags:
 - Lovely tag
 - Marvellous tag
@@ -47,7 +47,6 @@ tags:
 - Нет никакой иерархии (снимаем, короны и галстук, одежду лучше оставить).
 - От сказанного на встрече нет никаких последствий.
 
-{% asset_img '/posts/Crownandtie.jpeg' 'Снимите корону и галстук' 'Снимите корону и галстук' %}
 
 ### Зачем я это делаю? 
 
