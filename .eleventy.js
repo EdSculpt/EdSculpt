@@ -28,8 +28,6 @@ module.exports = function(eleventyConfig) {
   // Copy these static files to _site folder
   eleventyConfig.addPassthroughCopy('src/assets')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
-  eleventyConfig.addPassthroughCopy('src/avatar')
-  eleventyConfig.addPassthroughCopy('src/CV')
   eleventyConfig.addPassthroughCopy('src/i')
   eleventyConfig.addPassthroughCopy('src/browserconfig.xml')
   eleventyConfig.addPassthroughCopy('src/CNAME')
@@ -112,7 +110,7 @@ module.exports = function(eleventyConfig) {
     return lines
   })
   // Conver og images from SVG to JPG
-  eleventyConfig.on('afterBuild', () => {
+ /* eleventyConfig.on('afterBuild', () => {
     const socialPreviewImagesDir = '_site/assets/img/og/'
     fs.readdir(socialPreviewImagesDir, function (err, files) {
       if (files.length > 0) {
@@ -136,7 +134,7 @@ module.exports = function(eleventyConfig) {
         })
       }
     })
-  })
+  })*/
   // aside notes
   eleventyConfig.addLiquidShortcode('aside', (text,) => {
     return `<p class="aside">${text}</p>`

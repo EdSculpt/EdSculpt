@@ -191,10 +191,14 @@ body {
   }
   /* code */
   pre {
+    font-family: 'Fira Code', monospace;
     margin: 1.5em 0;
+    max-width: 50rem;
     white-space: pre-wrap;
   }
   p code {
+    max-width: 50rem;
+    font-family: 'Fira Code', monospace;
     line-break: loose;
     overflow-wrap: break-word;
   }
@@ -253,8 +257,16 @@ body {
   kbd,
   pre,
   samp {
-    font-family: monospace,monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.75rem;
     border-radius: 0.25rem;
     @apply text-social-github-dark bg-social-github-light p-0.5;
+  }
+
+  pre > code {
+    font-family: 'Fira Code', monospace;
+  }
+
+  @supports (font-variation-settings: normal) {
+    code { font-family: 'Fira Code VF', monospace; }
   }

@@ -3,26 +3,26 @@ layout: journal-feed
 title: Edsculpt Journal
 desc:  Small Description for Blog Post Feed
 pagination:
-  data: collections.posts
+  data: collections.articles
   size: 10
   reverse: true
-  alias: posts
+  alias: journal
 ---
-{% for post in pagination.items %}
-{% if post.data.published %}
+{% for article in pagination.items %}
+{% if article.data.published %}
 <div class="mb-16" itemscope itemtype="https://schema.org/BlogPosting">
   <h2 class="text-2xl sm:text-4xl font-bold leading-tight">
-    <a class="link-novisited no-underline hover:underline" href="{{ post.url }}" itemprop="url"><span itemprop="name">{{ post.data.title }}</span></a>
+    <a class="link-novisited no-underline hover:underline" href="{{ article.url }}" itemprop="url"><span itemprop="name">{{ article.data.title }}</span></a>
   </h2>
   <div>
-  <em><time itemprop="datePublished" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></em><span
-    class="text-base font-normal"> &middot;  Reading Time ≈ {{ post.templateContent | readTime }} min</span>
+  <em><time itemprop="datePublished" datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time></em><span
+    class="text-base font-normal"> &middot;  Reading Time ≈ {{ article.templateContent | readTime }} min</span>
   </div>
-  <div itemprop="articleBody">{{ post.templateContent }}</div>
+  <div itemprop="articleBody">{{ article.templateContent }}</div>
 
   <div class="flex flex-nowrap items-center mt-4 text-2xl sm:text-md md:text-lg lg:text-xl xl:text-2xl">
     <div class="pr-4">
-      {% for tag in post.data.tags %}
+      {% for tag in article.data.tags %}
       {% if tag != "posts" %}
       <span class="pr-2"><a href="/tags/{{ tag | slug }}" class="link-novisited no-underline hover:underline">{{ tag }}</a></span>
       {% endif %}

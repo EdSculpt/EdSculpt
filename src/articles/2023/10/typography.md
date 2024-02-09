@@ -4,7 +4,7 @@ title: Typography Examples
 desc: Example file in md extention with shortcuts
 date: 2023-11-13
 url: typography-features
-cover: "horizontal-mgmt-OG.png"
+cover: ""
 permalink: "/journal/{{ url | slug }}/"
 tags:
 - Features
@@ -111,6 +111,7 @@ But in GitHub-Flavored Markdown (GFM for short) there is a more convenient way: 
 ```html
 <div>
 <p>Тестовый тег<p>
+<-< && |->/>->
 </div>
 ```
 
@@ -215,18 +216,6 @@ Picture with alt and title:
 It's easy to remember: the syntax is the same as links, except that the opening square bracket is preceded by an exclamation mark.
 
 Pictures of „footnotes“:
-
-![Picture][image1]
-![Image][image2]
-![Picture][image3]
-
-[image1]: //placehold.it/250x100
-[image2]: //placehold.it/200x100
-[image3]: //placehold.it/150x100
-
-Image links:
-
-[![Alt text](//placehold.it/150x100)](http://example.com/)
 
 ## ShortCodes
 
