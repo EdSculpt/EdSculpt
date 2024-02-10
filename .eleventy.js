@@ -1,5 +1,6 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
 const moment = require('moment')
 const slugify = require('slugify')
 const img2picture = require('eleventy-plugin-img2picture')
@@ -75,14 +76,12 @@ module.exports = function(eleventyConfig) {
   })
 
   const md = markdownIt({ html: true, linkify: true })
-  /*md.use(markdownItAnchor, { 
+  md.use(markdownItAnchor, { 
     level: [1, 2], 
-    permalink: markdownItAnchor.permalink.headerLink({ 
-      safariReaderFix: true,
-      class: 'header-anchor',
-    })
-  })*/
+    slugify: s => slugify(s),
 
+  })
+  eleventyConfig.setLibrary('md', md)
   // MD Table Container // 
 
   
