@@ -76,6 +76,10 @@ module.exports = {
                   deep: '#4344b3',
                   deepde:'rgb(67, 68, 179, 0.25)'},
       },
+      alt:{
+        dark:'oklch(31.48% 0.015 161.11)',
+        main:'oklch(83.04% 0.071 93.01)',
+      },
       // ...
     },
     extend: {
