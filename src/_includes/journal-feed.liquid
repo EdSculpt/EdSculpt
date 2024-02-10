@@ -8,7 +8,7 @@
   <title>{{ title }} × [Page {{ pagination.pageNumber }}]</title>
   <meta name='description' content="{{ desc }} × [Page {{ pagination.pageNumber }}]">
   {% else %}
-  <title>📋 Blog Feed Page</title>
+  <title>{{ title }}</title>
   <meta name='description' content="{{ desc }}">
   {% endif %}
   <meta name="author" content="{{ site.author }}">
@@ -35,6 +35,7 @@
   {% include "_partials/fonts.liquid" %}
   {% include "_partials/favicons.liquid" %}
   <link rel="me" href="{{ site.mastodon }}">
+
   <!--styles-->
   <link href="/assets/styles/tailwind.css" rel="stylesheet" />
   <link href="/assets/styles/prism.min.css" rel="stylesheet" />
@@ -42,7 +43,7 @@
 </head>
 
 <body class="text-mk-background bg-white dark:text-mk-white dark:bg-mk-background">
-  {% include "_partials/nav.liquid" %}
+  {% include "_partials/nav-journal.liquid" %}
   <main class="">
 
     {{ content }}
